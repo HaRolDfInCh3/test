@@ -57,11 +57,7 @@
 			<scope>test</scope>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/com.spotify/dockerfile-maven-extension -->
-		<dependency>
-		    <groupId>com.spotify</groupId>
-		    <artifactId>dockerfile-maven-extension</artifactId>
-		    <version>1.4.13</version>
-		</dependency>
+		
 		
 	</dependencies>
 
@@ -71,27 +67,7 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-			<plugin>
-		     <groupId>com.spotify</groupId>
-  		     <artifactId>dockerfile-maven-plugin</artifactId>
-  			 <version>1.4.13</version>
-		      
-             <executions>
-                 <execution>
-                     <id>default</id>
-                     <goals>
-                         <goal>build</goal>
-                         <goal>push</goal>
-                     </goals>
-                 </execution>
-             </executions>
-             <configuration>
-             <serverId>docker-hub</serverId>
-             <repository>ayrtongonsallo/alljudoservicetest</repository>
-             <tag>${project.version}</tag>
-             <useMavenSettingsForAuth>true</useMavenSettingsForAuth>
-             </configuration>
-    		</plugin>
+			
 			
 		</plugins>
 	</build>
